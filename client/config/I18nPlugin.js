@@ -37,7 +37,8 @@ const options = [
     {value: 'pt_br', label: 'Português (Brasil)'},
     {value: 'zh_Hans', label: '简体中文'},
     {value: 'zh_Hant', label: '繁体中文'},
-    {value: 'ru', label: 'Русский'}
+    {value: 'ru', label: 'Русский'},
+    {value: 'nl_nl', label: 'Nederlands (Netherlands)'}
 ]
 
 /**
@@ -161,13 +162,15 @@ export default class I18nPlugin extends PureComponent {
 
     render() {
         return <Fragment>
-            <Fill slot="toolbar" group="9_language">
+            <Fill slot="tab-actions" group="9_language">
                 <Select
                     styles={{
                         control: provided => ({
                             ...provided,
                             width: 125,
                             minHeight: 24,
+                            marginRight: 10,
+                            marginTop: 2,
                             "&>div:first-of-type": {
                                 padding: "0px 4px"
                             },
